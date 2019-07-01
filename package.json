@@ -1,6 +1,6 @@
 {
   "name": "devour-drupal",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Making Drupal accessible via the JSON:API module.",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "devour-client": "^2.0.17"
+    "devour-client": "^2.0.23"
   }
 }
