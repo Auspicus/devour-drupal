@@ -15,11 +15,10 @@ const JsonApi = require('devour-client')
 const httpProtocol = () => typeof window !== 'undefined' ? window.location.protocol : 'https:'
 
 function DevourDrupal({ logger = true } = {}) {
-  
   this.devour = new JsonApi({ logger, pluralize: false })
 
-  this.addBearer = function (token) {
-    this.devour.headers['Authorization'] = `Bearer ${token}`
+  this.bearer = function (token) {
+    this.devour.headers['Authorization'] = token ? `Bearer ${token}` : null
   }
 
   this.init = function (openApi) {
